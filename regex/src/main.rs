@@ -16,7 +16,7 @@ macro_rules! lx {
             $regex => println!("{tok} YES", tok=tok.trim()),
             "[^\n]*\n" => println!("{tok} NO", tok=tok.trim()),
         }
-    }
+    };
 }
 
 lx!(abc: "a*b*c*\n");
@@ -29,7 +29,7 @@ fn main() -> anyhow::Result<()> {
     let orig = std::fs::read_to_string(args.file)?;
     let mut file = orig.as_str();
     while !file.is_empty() {
-        file = even_0_1(file).unwrap().1;
+        file = zero_one_one(file).unwrap().1;
     }
 
     Ok(())

@@ -1,6 +1,6 @@
 CXX := g++
 CXX_ARGS := -std=c++17
-TARGETS := even-ab oh-one-one balanced end-oh-one-one general-balanced
+TARGETS := even-ab end-oh-one-one general-balanced even-oh-one
 
 all: $(TARGETS)
 
